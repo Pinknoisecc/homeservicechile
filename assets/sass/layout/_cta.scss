@@ -1,0 +1,274 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Cta CSS
+----------------------------------------*/
+.tj-cta-section {
+   background-color: var(--tj-color-theme-bg-2);
+   background-size: 27.5% 100%;
+   background-repeat: no-repeat;
+   position: relative;
+   background-position: center;
+   overflow: hidden;
+   &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-image: url(../images/shapes/cta.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 1;
+   }
+   .cta-inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 26%;
+      background-size: cover;
+      height: 100%;
+      background-position: top center;
+      z-index: 2;
+      border-right: 4px solid var(--tj-color-theme-secondary);
+      .cta-icon {
+         display: inline-flex;
+         align-items: center;
+         justify-content: center;
+         width: 90px;
+         height: 90px;
+         line-height: 1;
+         font-size: 50px;
+         color: var(--tj-color-common-white);
+         background: linear-gradient(90deg, var(--tj-color-theme-primary) 0%, var(--tj-color-theme-secondary) 100%);
+         border-radius: 50%;
+         position: absolute;
+         right: -40px;
+         top: 50%;
+         transform: translateY(-50%);
+         z-index: 2;
+      }
+      @media #{$xl} {
+         width: 22%;
+      }
+      @media #{$lg} {
+         width: 15%;
+      }
+      @media #{$md, $sm, $xs} {
+         position: initial;
+         background-image: none !important;
+         border: none;
+         text-align: center;
+         width: 100%;
+         .cta-icon {
+            position: relative;
+            transform: translateY(0);
+            top: 0;
+            right: 0;
+            z-index: 2;
+         }
+      }
+   }
+   &.style-2 {
+      background: var(--tj-color-theme-primary);
+      position: relative;
+      z-index: 2;
+      overflow: hidden;
+      &::before {
+         display: none;
+      }
+      .cta-shapes-2 {
+         position: absolute;
+         top: 50%;
+         right: 65px;
+         transform: translateY(-50%);
+         z-index: -1;
+      }
+      .cta-inner {
+         width: 30%;
+         background-repeat: no-repeat;
+         background-position: center;
+         .cta-shapes {
+            position: absolute;
+            top: -12px;
+            right: -40px;
+            max-width: 250px;
+            height: 325px;
+            width: 100%;
+            mask-image: url(../images/shapes/cta-1.svg);
+            mask-position: center;
+            mask-repeat: no-repeat;
+            mask-size: contain;
+            background: var(--tj-color-common-white);
+            img {
+               height: 100%;
+            }
+         }
+         .cta-shapes-3 {
+            position: absolute;
+            right: -10px;
+            top: 1px;
+            width: 34%;
+            height: 100%;
+            z-index: -1;
+            clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+            background: var(--tj-color-theme-primary);
+            z-index: -1;
+         }
+         @media #{$lg} {
+            .cta-shapes {
+               top: -30px;
+            }
+         }
+      }
+      .cta-button {
+         transform: translateY(-310%);
+         .tj-white-btn {
+            padding: 22px 30px;
+         }
+      }
+      @media #{$xxl} {
+         .cta-inner {
+            width: 25%;
+            .cta-shapes-3 {
+               width: 50%;
+            }
+         }
+      }
+      @media #{$xl} {
+         .cta-inner {
+            width: 24%;
+            .cta-shapes-3 {
+               width: 60%;
+            }
+         }
+      }
+      @media #{$lg} {
+         .cta-inner {
+            width: 23%;
+            .cta-shapes-3 {
+               width: 70%;
+            }
+         }
+      }
+      @media #{$md, $sm, $xs} {
+         padding: 60px 0 80px;
+         .cta-inner {
+            display: none;
+         }
+         .cta-button {
+            display: inline-flex;
+            position: initial;
+            transform: translateY(0);
+         }
+      }
+   }
+   .cta-button {
+      position: absolute;
+      z-index: 4;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-300%);
+   }
+   @media #{$md, $sm, $xs} {
+      padding: 70px 0;
+      .cta-button {
+         position: relative;
+         transform: translateY(0);
+         top: 0;
+         right: 0;
+         z-index: 2;
+      }
+   }
+}
+
+.cta-content-area {
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   padding: 65px 0;
+   position: relative;
+   z-index: 2;
+   .cta-content {
+      display: flex;
+      align-items: center;
+      padding-left: 115px;
+      position: relative;
+      z-index: 2;
+      .cta-text {
+         max-width: 565px;
+         width: 100%;
+         .title {
+            color: var(--tj-color-common-white);
+            line-height: 1.4;
+            margin-bottom: 10px;
+         }
+         .desc {
+            color: var(--tj-color-common-white);
+            letter-spacing: 0.32px;
+            p {
+               &:last-child {
+                  margin-bottom: 0;
+               }
+            }
+         }
+      }
+   }
+   &.style-2 {
+      padding: 76px 0;
+      .cta-content {
+         .cta-text {
+            max-width: 645px;
+         }
+      }
+      @media #{$xl} {
+         .cta-content {
+            padding-left: 50px;
+         }
+      }
+      @media #{$lg} {
+         .cta-content {
+            padding-left: 45px;
+            .cta-text {
+               .title {
+                  font-size: 38px;
+               }
+            }
+         }
+      }
+      @media #{$md, $sm, $xs} {
+         padding: 0px;
+         .cta-content {
+            padding-left: 0px;
+            .cta-text {
+               max-width: 100%;
+               text-align: center;
+               margin-bottom: 20px;
+            }
+         }
+      }
+   }
+   @media #{$xxl} {
+      .cta-content {
+         padding-left: 150px;
+      }
+   }
+   @media #{$lg} {
+      .cta-content {
+         padding-left: 15px;
+      }
+   }
+   @media #{$md, $sm, $xs} {
+      padding: 30px 0 40px;
+      .cta-content {
+         padding-left: 0px;
+         .cta-text {
+            text-align: center;
+            margin: 0 auto;
+         }
+      }
+   }
+}
+/* !END: Cta CSS */

@@ -1,0 +1,248 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Team CSS
+----------------------------------------*/
+.tj-team-details {
+   padding-top: 120px;
+   padding-bottom: 120px;
+   @media #{$md, $sm, $xs} {
+      padding-top: 80px;
+      padding-bottom: 70px;
+   }
+}
+
+.team-thumb-image {
+   max-width: 565px;
+   width: 100%;
+   img {
+      width: 100%;
+      border-radius: 20px;
+   }
+   @media #{$md, $sm, $xs} {
+      max-width: 100%;
+      margin-bottom: 35px;
+   }
+}
+
+.team-details-inner {
+   max-width: 552px;
+   width: 100%;
+   .tj-heading-two {
+      margin-bottom: 15px;
+      .title {
+         margin-bottom: 5px;
+         color: var(--tj-color-heading-primary);
+         font-size: 40px;
+      }
+      span {
+         font-size: 18px;
+         font-family: var(--tj-ff-heading);
+         font-weight: var(--tj-fw-bold);
+         color: var(--tj-color-theme-secondary);
+      }
+   }
+   .desc {
+      margin-bottom: 25px;
+      line-height: 1.9;
+      letter-spacing: 0.32px;
+      p {
+         &:last-child {
+            margin-bottom: 0;
+         }
+      }
+   }
+   .team-share {
+      margin-bottom: 20px;
+      ul {
+         margin: 0;
+         padding: 0;
+         list-style: none;
+         display: flex;
+         align-items: center;
+         gap: 15px;
+         li {
+            a {
+               display: inline-flex;
+               align-items: center;
+               justify-content: center;
+               width: 30px;
+               height: 30px;
+               line-height: 1;
+               color: var(--tj-color-theme-secondary);
+               background: transparent;
+               border: 1px solid var(--tj-color-theme-secondary);
+               border-radius: 50%;
+               i {
+                  color: var(--tj-color-theme-secondary);
+               }
+               &:hover {
+                  color: var(--tj-color-common-white);
+                  background-color: var(--tj-color-heading-secondary);
+                  border-color: var(--tj-color-theme-secondary);
+                  i {
+                     color: var(--tj-color-theme-bg-2);
+                  }
+               }
+            }
+         }
+      }
+   }
+   .tj-progress-bar {
+      .progress-title {
+         .title {
+            font-size: 30px;
+            color: var(--tj-color-heading-secondary);
+            margin-bottom: 0;
+         }
+      }
+   }
+   .tj-progress-bar {
+      max-width: 520px;
+      width: 100%;
+      .progress-title {
+         margin-bottom: 20px;
+         .title {
+            color: var(--tj-color-heading-primary);
+            font-weight: var(--tj-fw-ebold);
+            font-size: 25px;
+         }
+      }
+      label {
+         font-size: 18px;
+         font-weight: var(--tj-fw-bold);
+         font-family: var(--tj-ff-heading);
+         color: var(--tj-color-heading-primary);
+         display: block;
+         margin-bottom: 12px;
+      }
+      .skills {
+         background-color: rgba(65, 68, 74, 0.2);
+         height: 10px;
+         position: relative;
+         border-radius: 15px;
+         margin-bottom: 20px;
+         span {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            font-size: 22px;
+            font-weight: var(--tj-fw-bold);
+            font-family: var(--tj-ff-heading);
+            color: var(--tj-color-heading-primary);
+         }
+         .skillbar {
+            background-color: var(--tj-color-theme-secondary);
+            width: 0px;
+            height: 10px;
+            border-radius: 15px;
+         }
+      }
+   }
+   @media #{$md, $sm, $xs} {
+      .tj-heading-two {
+         .title {
+            font-size: 30px;
+         }
+      }
+   }
+}
+
+.team-details-info {
+   display: flex;
+   align-items: center;
+   column-gap: 40px;
+   margin-bottom: 30px;
+   @media #{$sm, $xs} {
+      flex-wrap: wrap;
+   }
+}
+
+.team-details-item {
+   .check-list {
+      ul {
+         margin: 0;
+         padding: 0;
+         list-style: none;
+         li {
+            color: var(--tj-color-heading-primary);
+            font-family: var(--tj-ff-heading);
+            font-weight: var(--tj-fw-bold);
+            font-size: 18px;
+            position: relative;
+            z-index: 2;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            &:last-child {
+               margin-bottom: 0;
+            }
+            span {
+               display: flex;
+               flex-wrap: wrap;
+               align-items: center;
+               justify-content: center;
+               width: 18px;
+               height: 18px;
+               line-height: 1;
+               border-radius: 50%;
+               font-size: 12px;
+               color: var(--tj-color-common-white);
+               background: var(--tj-color-theme-secondary);
+               position: absolute;
+               top: 6px;
+               left: 0;
+            }
+         }
+      }
+   }
+   @media #{$xs} {
+      margin-bottom: 15px;
+      &:last-child {
+         margin-bottom: 0;
+      }
+   }
+}
+
+.team-contact-area {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   gap: 40px;
+   margin-bottom: 30px;
+   .contact-info-two {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      .contact-icon {
+         display: inline-flex;
+         align-items: center;
+         justify-content: center;
+         width: 40px;
+         height: 40px;
+         line-height: 1;
+         font-size: 18px;
+         color: var(--tj-color-theme-secondary);
+         border: 1px solid var(--tj-color-theme-secondary);
+         border-radius: 50%;
+      }
+      span {
+         font-size: 14px;
+         display: block;
+         margin-bottom: 5px;
+      }
+      .link {
+         color: var(--tj-color-heading-primary);
+         font-family: var(--tj-ff-heading);
+         font-weight: var(--tj-fw-bold);
+         font-size: 18px;
+         letter-spacing: 0.32px;
+         &:hover {
+            color: var(--tj-color-theme-secondary);
+         }
+      }
+   }
+   @media #{$xs} {
+      gap: 25px;
+   }
+}
+/* !END: Team CSS */

@@ -1,0 +1,38 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Heading CSS
+----------------------------------------*/
+.tj-heading-area {
+   .subs-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 15px;
+      span {
+         color: var(--tj-color-theme-primary);
+         font-size: 22px;
+         line-height: 1;
+         &:nth-child(3) {
+            transform: rotate(-70deg);
+            position: relative;
+            top: -3px;
+         }
+         i {
+            display: inline-flex;
+            line-height: 1;
+         }
+      }
+      .sub-title {
+         color: var(--tj-color-theme-primary);
+         font-size: 18px;
+         font-family: var(--tj-ff-heading);
+         font-weight: var(--tj-fw-bold);
+         text-transform: uppercase;
+      }
+   }
+   .title {
+      margin-bottom: 0;
+   }
+}
+/* !END: Theme Heading  CSS */

@@ -1,0 +1,224 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Counter CSS
+----------------------------------------*/
+.tj-counter-section {
+   padding: 90px 0 60px;
+   background: linear-gradient(90deg, var(--tj-color-theme-primary) 0%, var(--tj-color-theme-secondary) 100%);
+   position: relative;
+   z-index: 2;
+   .shapes-1 {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+   }
+   .shapes-2 {
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
+   }
+   &.style-3 {
+      position: relative;
+      z-index: 2;
+      background: var(--tj-color-theme-primary);
+      padding: 60px 0 50px;
+      .left-shapes {
+         max-width: 170px;
+         width: 100%;
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         z-index: -1;
+         img {
+            width: 100%;
+         }
+      }
+      .right-shapes {
+         max-width: 170px;
+         width: 100%;
+         position: absolute;
+         bottom: 0;
+         right: 0;
+         z-index: -1;
+         img {
+            width: 100%;
+         }
+      }
+      @media #{$lg, $md, $sm, $xs} {
+         .right-shapes,
+         .left-shapes {
+            max-width: 100px;
+         }
+      }
+   }
+   @media #{$lg, $md, $xs} {
+      padding: 80px 0 50px;
+   }
+}
+
+.counter-item {
+   margin-bottom: 30px;
+   .counter-content {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 10px;
+      .counter-icon {
+         font-size: 60px;
+         color: var(--tj-color-common-white);
+         line-height: 1;
+      }
+      .tj-count {
+         display: flex;
+         align-items: center;
+         font-size: 65px;
+         font-family: var(--tj-ff-heading);
+         font-weight: var(--tj-fw-bold);
+         color: var(--tj-color-common-white);
+         line-height: 1;
+      }
+   }
+   .client {
+      font-size: 18px;
+      letter-spacing: 0.32px;
+      color: var(--tj-color-common-white);
+      text-transform: uppercase;
+   }
+   @media #{$lg, $md} {
+      .counter-content {
+         .tj-count {
+            font-size: 60px;
+         }
+      }
+   }
+   @media #{$sm, $xs} {
+      .counter-content {
+         .tj-count {
+            font-size: 50px;
+         }
+      }
+   }
+   @media #{$xs} {
+      text-align: center;
+      .counter-content {
+         justify-content: center;
+      }
+   }
+}
+
+.counter-item-two {
+   position: relative;
+   margin-bottom: 10px;
+   z-index: 2;
+   .tj-count {
+      display: flex;
+      align-items: center;
+      -webkit-text-fill-color: var(--tj-color-theme-primary);
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+      font-size: 150px;
+      font-weight: var(--tj-fw-ebold);
+      font-family: var(--tj-ff-heading);
+      line-height: 1;
+   }
+   .sub-title {
+      position: absolute;
+      top: 46%;
+      left: 25px;
+      width: 100%;
+      font-size: 18px;
+      letter-spacing: 0.32px;
+      text-transform: uppercase;
+      color: var(--tj-color-common-white);
+   }
+   &.style-2 {
+      .tj-count {
+         color: rgba(255, 255, 255, 0.3);
+         -webkit-text-fill-color: initial;
+         -webkit-text-stroke: initial;
+      }
+      .sub-title {
+         left: 70px;
+      }
+   }
+   &.style-3 {
+      .sub-title {
+         left: 65px;
+      }
+   }
+   &.style-4 {
+      .tj-count {
+         color: rgba(255, 255, 255, 0.1);
+         -webkit-text-fill-color: initial;
+         -webkit-text-stroke: initial;
+      }
+      .sub-title {
+         left: 40px;
+      }
+   }
+   @media #{$xl} {
+      .tj-count {
+         font-size: 120px;
+      }
+   }
+   @media #{$lg} {
+      .tj-count {
+         font-size: 100px;
+      }
+      &.style-2 {
+         .sub-title {
+            left: 45px;
+         }
+      }
+      &.style-3 {
+         .sub-title {
+            left: 35px;
+         }
+      }
+      &.style-4 {
+         .sub-title {
+            left: 25px;
+         }
+      }
+   }
+   @media #{$md, $sm, $xs} {
+      .tj-count {
+         font-size: 100px;
+      }
+      &.style-2 {
+         .sub-title {
+            left: 45px;
+         }
+      }
+      &.style-3 {
+         .sub-title {
+            left: 35px;
+         }
+      }
+      &.style-4 {
+         .sub-title {
+            left: 25px;
+         }
+      }
+   }
+   @media #{$xs} {
+      text-align: center;
+      .tj-count {
+         font-size: 65px;
+         justify-content: center;
+      }
+      .sub-title {
+         left: 0;
+      }
+      &.style-4,
+      &.style-3,
+      &.style-2 {
+         .sub-title {
+            left: 0;
+         }
+      }
+   }
+}
+/* !END: Counter CSS */

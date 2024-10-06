@@ -1,0 +1,146 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Form CSS
+----------------------------------------*/
+.contact-form-one {
+   max-width: 600px;
+   width: 100%;
+   margin-left: auto;
+   background: linear-gradient(90deg, var(--tj-color-theme-primary) 0%, var(--tj-color-theme-secondary) 100%);
+   border-radius: 10px;
+   padding: 45px 60px 50px;
+   .title {
+      color: var(--tj-color-common-white);
+      font-weight: var(--tj-fw-bold);
+      margin-bottom: 10px;
+   }
+   form {
+      .form-input {
+         margin-bottom: 10px;
+         textarea,
+         input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]),
+         input[type="email"],
+         input[type="text"] {
+            padding: 0px 0px 10px 0px;
+            color: var(--tj-color-common-white);
+            font-family: var(--tj-ff-heading);
+            font-size: 16px;
+            background: transparent;
+            border: none;
+            letter-spacing: 0.32px;
+            border-bottom: 1px dashed var(--tj-color-border-1);
+            padding: 20px 0;
+            &::-ms-input-placeholder {
+               color: var(--tj-color-grey-2);
+               letter-spacing: 0.32px;
+               font-size: 16px;
+            }
+            &::placeholder {
+               color: var(--tj-color-grey-2);
+               letter-spacing: 0.32px;
+               font-size: 16px;
+            }
+         }
+         textarea {
+            min-height: 125px;
+            resize: none;
+         }
+      }
+   }
+   .submit-button {
+      margin-top: 35px;
+   }
+}
+
+.contact-form-two {
+   max-width: 525px;
+   width: 100%;
+   padding-top: 50px;
+   .form-input {
+      border-bottom: 1px solid rgba(55, 58, 63, 0.2);
+      margin-bottom: 25px;
+      label {
+         font-weight: var(--tj-fw-bold);
+         color: var(--tj-color-heading-primary);
+         margin-bottom: 5px;
+      }
+      textarea,
+      input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]),
+      input[type="email"],
+      input[type="text"] {
+         padding: 0px 0px 10px 0px;
+         color: var(--tj-color-theme-secondary);
+         font-family: var(--tj-ff-heading);
+         font-size: 14px;
+         letter-spacing: 0.32px;
+         &::-ms-input-placeholder {
+            color: var(--tj-color-text-body);
+            font-size: 14px;
+            letter-spacing: 0.32px;
+         }
+         &::placeholder {
+            color: var(--tj-color-text-body);
+            font-size: 14px;
+            letter-spacing: 0.32px;
+         }
+      }
+      textarea {
+         min-height: 125px;
+         resize: none;
+      }
+   }
+}
+
+.contact-form-three {
+   max-width: 600px;
+   width: 100%;
+   margin-left: auto;
+   .title {
+      color: var(--tj-color-heading-primary);
+      margin-bottom: 40px;
+   }
+   form {
+      .form-input {
+         margin-bottom: 20px;
+         textarea,
+         input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]),
+         input[type="email"],
+         input[type="text"] {
+            color: var(--tj-color-text-body);
+            font-family: var(--tj-ff-heading);
+            font-size: 14px;
+            background: transparent;
+            border: 1px solid rgba(105, 105, 105, 0.1);
+            letter-spacing: 0.32px;
+            padding: 17px 25px;
+            border-radius: 7px;
+            &::-ms-input-placeholder {
+               color: var(--tj-color-text-body);
+               letter-spacing: 0.32px;
+               font-size: 14px;
+            }
+            &::placeholder {
+               color: var(--tj-color-text-body);
+               letter-spacing: 0.32px;
+               font-size: 14px;
+            }
+         }
+         textarea {
+            min-height: 125px;
+            resize: none;
+         }
+      }
+   }
+   .submit-button {
+      margin-top: 35px;
+      .tj-primary-btn {
+         width: 100%;
+         border-radius: 7px;
+         &::before {
+            border-radius: 7px;
+         }
+      }
+   }
+}
+/* !END: Form CSS */

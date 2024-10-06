@@ -1,0 +1,60 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Brand CSS
+----------------------------------------*/
+.tj-brand-section {
+   background: linear-gradient(90deg, var(--tj-color-theme-primary) 0%, var(--tj-color-theme-secondary) 100%);
+   padding: 90px 0;
+   &.style-2 {
+      background: var(--tj-color-grey-2);
+      padding: 63px 0;
+      .brand-item {
+         max-width: 100%;
+         width: 100%;
+      }
+      @media #{$md, $sm, $xs} {
+         padding: 45px 0;
+      }
+   }
+   .tj-brand-slider {
+      .swiper-wrapper {
+         align-items: center;
+      }
+   }
+   .tj-brand-slider2 {
+      .swiper-wrapper {
+         align-items: center;
+      }
+   }
+   .brand-item {
+      max-width: 150px;
+      width: 100%;
+      a {
+         display: inline-block;
+         opacity: 0.3;
+         img {
+            width: 100%;
+         }
+      }
+      &:hover {
+         a {
+            opacity: 1;
+         }
+      }
+      @media #{$md} {
+         max-width: 115px;
+      }
+      @media #{$sm} {
+         max-width: 95px;
+      }
+      @media #{$xs} {
+         max-width: 75px;
+      }
+   }
+   @media #{$md, $sm, $xs} {
+      padding: 50px 0;
+   }
+}
+
+/* !END: Brand CSS */

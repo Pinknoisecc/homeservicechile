@@ -1,0 +1,170 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme FAQ CSS
+----------------------------------------*/
+.tj-faq-section {
+	padding-top: 120px;
+	padding-bottom: 120px;
+	position: relative;
+	z-index: 2;
+	background: var(--tj-color-theme-bg-2);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	&.style-2 {
+		.contact-form-one {
+			margin-left: 0;
+			margin-right: auto;
+		}
+
+		@media #{$md, $sm, $xs} {
+			padding-top: 80px;
+
+			.contact-form-one {
+				margin-top: 60px;
+			}
+		}
+	}
+	.tj-heading-area {
+		margin-bottom: 50px;
+		.subs-title {
+			span {
+				color: var(--tj-color-common-white);
+			}
+		}
+		.title {
+			color: var(--tj-color-common-white);
+		}
+	}
+	.contact-form-one {
+		position: relative;
+		z-index: 1;
+		&::before {
+			position: absolute;
+			content: "";
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-image: url(../images/shapes/faq-2.svg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			z-index: -1;
+		}
+	}
+	@media #{$lg, $md, $sm, $xs} {
+		.contact-form-one {
+			padding: 35px 20px;
+		}
+	}
+	@media #{$md, $sm, $xs} {
+		padding-top: 80px;
+		padding-bottom: 80px;
+		.tj-heading-area {
+			margin-bottom: 40px;
+		}
+		.contact-form-one {
+			max-width: 100%;
+			margin-top: 50px;
+		}
+	}
+}
+
+.accordion-item {
+	border: none;
+	box-shadow: none;
+	position: relative;
+	z-index: 2;
+	max-width: 715px;
+	width: 100%;
+	border-radius: 5px;
+	background: var(--tj-color-grey-3);
+	margin-bottom: 30px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	&.active {
+		background: linear-gradient(
+			90deg,
+			var(--tj-color-theme-primary) 0%,
+			var(--tj-color-theme-secondary) 100%
+		);
+	}
+	.faq-title {
+		font-size: 24px;
+		font-family: var(--tj-ff-heading);
+		font-weight: var(--tj-fw-bold);
+		padding: 20px 55px 20px 30px;
+		background-color: transparent;
+		position: relative;
+		color: var(--tj-color-common-white);
+		width: 100%;
+		text-align: left;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+		&.collapsed {
+			border-bottom: 1px transparent;
+		}
+		&:before {
+			position: absolute;
+			top: 38px;
+			right: 30px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transform: translateY(-50%);
+			content: "\f062";
+			font-family: "Font Awesome 6 Pro";
+			font-size: 12px;
+			color: var(--tj-color-theme-primary);
+			font-weight: var(--tj-fw-regular);
+			line-height: 1;
+			height: 25px;
+			width: 20px;
+			mask-image: url(../images/shapes/vector-1.svg);
+			mask-position: center;
+			mask-repeat: no-repeat;
+			mask-size: contain;
+			background: var(--tj-color-common-white);
+			@include transition(all 0.3s ease-in-out 0s);
+		}
+		&:not(.collapsed) {
+			box-shadow: none;
+			&:before {
+				content: "\f063";
+				color: var(--tj-color-theme-primary);
+				background: var(--tj-color-common-white);
+			}
+		}
+		&:focus {
+			box-shadow: none;
+		}
+		&:after {
+			display: none;
+		}
+	}
+	.faq-text {
+		padding: 15px 10px 30px 30px;
+		max-width: 560px;
+		width: 100%;
+		p {
+			color: var(--tj-color-common-white);
+			letter-spacing: 0.32px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	@media #{$lg, $md, $sm, $xs} {
+		.faq-title {
+			font-size: 20px;
+			padding: 20px 55px 20px 20px;
+		}
+	}
+	@media #{$md, $sm, $xs} {
+		margin-bottom: 20px;
+	}
+}
+
+/* !END: Theme FAQ CSS */
