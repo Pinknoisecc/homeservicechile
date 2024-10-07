@@ -2084,6 +2084,7 @@ START: Header CSS
   color: var(--tj-color-common-white);
   font-size: 1px;
   z-index: 2;
+  font-size: 18px;
 }
 .hamburger-infos .contact-item .contact-text span {
   color: var(--tj-color-grey-2);
@@ -2464,7 +2465,7 @@ START: Header CSS
   color: var(--tj-color-common-white);
   font-family: var(--tj-ff-heading);
   font-weight: var(--tj-fw-bold);
-  font-size: 20px;
+  font-size: 14px;
 }
 .offcanvas-area .contact-infos .contact-item .contact-text .text a {
   color: var(--tj-color-common-white);
@@ -3436,13 +3437,13 @@ START: Theme Footer CSS
   color: var(--tj-color-grey-2);
   font-family: var(--tj-ff-heading);
   font-weight: var(--tj-fw-light);
-  font-size: 18px;
+  font-size: 14px;
 }
 .footer-contact-infos .contact-item .contact-text .text {
   color: var(--tj-color-common-white);
   font-family: var(--tj-ff-heading);
   font-weight: var(--tj-fw-bold);
-  font-size: 22px;
+  font-size: 14px;
 }
 .footer-contact-infos .contact-item .contact-text .text a {
   color: var(--tj-color-common-white);
@@ -3455,7 +3456,7 @@ START: Theme Footer CSS
     margin-bottom: 10px;
   }
   .footer-contact-infos .contact-item .contact-text .text {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 @media (max-width: 575px) {
